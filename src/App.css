@@ -1,0 +1,998 @@
+
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 2rem 17.3rem;
+  position: sticky; /* Makes the navbar sticky */
+  top: 0; /* Position at the top */
+  background-color: white; /* Background color for the navbar */
+  z-index: 1000; /* Ensure it stays above other content */
+ 
+}
+
+.logo img {
+  height: 45px; /* Adjust the height as needed */
+  margin-right: 7rem;
+}
+
+.nav-links {
+  list-style-type: none; /* Remove bullet points */
+  display: flex; /* Align items horizontally */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 30px; /* Space out the links */
+  padding: 0px 20px;
+}
+
+.nav-links a {
+  text-decoration: none; /* Remove underline from links */
+  color: #000; /* Set link color */
+  font-weight: 600;
+  position: relative;
+  font-size: 14px;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px; /* Adjust the thickness of the underline */
+  bottom: 0; /* Start position for the underline */
+  left: 0;
+  background-color: black; /* Set the underline color */
+  transform: translateY(10px); /* Move the underline below the link */
+  opacity: 0; /* Hide the underline initially */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Add transition for transform and opacity */
+}
+
+.nav-links a:hover::after {
+  transform: translateY(0); /* Move the underline up to the bottom of the link */
+  opacity: 1; /* Show the underline */
+}
+
+.nav-links a:not(:hover)::after {
+  transform: translateY(10px); /* Move the underline down when not hovered */
+  opacity: 0; /* Hide the underline */
+}
+
+/* Search Container */
+.search-container {
+  display: flex;
+  align-items: center; /* Center the items vertically */
+  margin-left: auto; /* Push the search container to the right */
+}
+
+.search-input {
+  border: 1px solid #ccc; /* Add border */
+  padding: 5px 10px; /* Padding for the input */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 14px; /* Adjust font size */
+}
+
+.search-icon {
+  margin-left: 5px; /* Space between input and icon */
+  cursor: pointer; /* Pointer cursor for the icon */
+}
+
+
+/* Hero Section Css */
+
+
+
+.hero-container {
+  display: flex;
+  flex-direction: column; /* Stack vertically */
+  height: 100vh;
+  position: relative;
+  margin: 0; 
+  padding: 0px;
+  box-sizing: border-box; 
+}
+
+.text-section {
+  width: 41%; /* Full width for the top section */
+  background-color: white;
+  position: relative;
+  top: 200px;
+  left: 0;
+  padding-top: 0;
+  margin-top: -200px;
+  margin-left: 350px;
+  height: 200px;
+}
+
+.text-content h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-left: 0;
+}
+
+.text-content p {
+  font-size: 1.2rem;
+  text-align: left;
+  font-weight: 500;
+  color: #4f4f4f;
+}
+
+.text-content span {
+  font-size: 0.8rem;
+  position: relative;
+  top: -36px;
+}
+
+
+
+.slideshow-section {
+  width: 100%; /* Full width for the bottom section */
+  height: 830px; /* Adjust as needed */
+  position: relative;
+  display: flex;
+  clip-path: polygon(0 69%, 100% 3%, 100% 100%, 0 100%);
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures video covers the entire section */
+  z-index: 0; /* Set video behind text */
+}
+
+.slide-content {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  padding: 20px;
+  position: relative; /* Keep the content above the video */
+  z-index: 1; /* Ensure content is above the video */
+  top: 230px;
+  left: 400px;
+  
+}
+
+.slide-0-content{
+   width: 20%;
+  
+}
+
+.slide-1-content{
+  width: 20%;
+ 
+}
+
+.slide-2-content{
+  width: 17%;
+
+ 
+}
+
+.slide-3-content{
+  width: 20%;
+
+}
+
+
+.slide-content h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  align-self: flex-end;
+}
+
+
+.slide-content button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 20px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 4px 2px;
+  cursor: pointer;
+  align-self: flex-end;
+  
+}
+
+.slide-content  button:hover {
+  background-color: white; 
+  color: black; /* Text color changes on hover */
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 70px;
+  left: 30%;
+  transform: translateX(-50%);
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.nav-item {
+  width: 100px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin: 0 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.nav-item.active {
+  background-color: white;
+}
+
+
+
+
+
+
+/* ServicesSection Css */
+
+.capabilities-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 10rem; /* Adjust padding as needed */
+}
+
+.capabilities-title {
+  font-size: 3rem; /* Adjust font size as needed */
+  font-weight: bold;
+  margin-left: 12rem;
+}
+
+.capabilities-description {
+  font-size: 1.1rem; /* Adjust font size as needed */
+  font-weight: 400;
+  max-width: 30%; /* Adjust max-width as needed */
+  margin-right: 18rem;
+}
+
+/* Container for the card grid */
+.card-grid {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden; /* To clear floats */
+}
+
+/* Individual card styling */
+.card {
+  float: left;
+  position: relative; /* Required for positioning the overlay */
+  width: calc(25% - 10px);
+  margin-right: 10px;
+  margin-bottom: 10px;
+  height: 380px;
+  width: 267px;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:nth-child(4n) {
+  margin-right: 0;
+}
+
+/* Remove zoom on hover */
+.card:hover {
+  transform: none; /* No zoom effect */
+}
+
+/* Make the image black and white initially */
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(100%); /* Black and white effect */
+  transition: filter 0.3s ease;
+}
+
+.card:hover .card-image {
+  filter: grayscale(0%)blur(5px); /* Remove black and white effect */
+}
+
+/* Overlay for title and description */
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+  color: #fff;
+  opacity: 1; /* Overlay is always visible */
+  transition: opacity 0.3s ease;
+  height: fit-content;
+}
+
+/* Title styling (always visible) */
+.card-overlay h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: left;
+  margin: 0 0 10px; /* Space between title and description */
+  color: #fff;
+  z-index: 1; /* Bring the text to the front */
+  position: relative;
+  top: 50px;
+  right: 20px;
+  width: 60%;
+}
+
+/* Description styling (hidden by default) */
+.card-overlay p {
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-align: left;
+  margin: 0 30px;
+  color: #fff;
+  z-index: 1; /* Bring the text to the front */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease;
+  position: relative;
+  top: 150px;
+}
+
+/* Show description on hover */
+.card:hover .card-overlay p {
+  opacity: 1; /* Show description on hover */
+}
+
+
+
+
+
+
+
+
+
+/*ScaleAtSpeed Css */
+
+.scale-container {
+  display: flex;
+  flex-direction: column; /* Stack vertically */
+  height: 100vh;
+  position: relative;
+ 
+  padding: 0px;
+  box-sizing: border-box; 
+}
+
+.scale-section {
+  width: 41%; /* Full width for the top section */
+  background-color: white;
+  position: relative;
+  top: 200px;
+  left: 0;
+  padding-top: 0;
+  margin-top: -150px;
+  margin-left: 350px;
+  height: 200px;
+}
+
+.scale-content h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-left: 0;
+  width: 50%;
+}
+
+.scale-content p {
+  font-size: 1.1rem;
+  text-align: left;
+  font-weight: 500;
+  color: #4f4f4f;
+  width: 60%;
+}
+
+.scale-content span{
+  color: #e31635;
+}
+
+
+
+.speed-section {
+  width: 100%; /* Full width for the bottom section */
+ height: 1000px; /* Adjust as needed */
+  position: relative;
+  display: flex;
+  clip-path: polygon(0 69%, 100% 20%, 100% 100%, 0 100%);
+  justify-content: center;
+  align-items: center;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures video covers the entire section */
+  z-index: 1; /* Set video behind text */
+}
+
+.speed-content {
+  color: white;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-left: 100px;
+  padding-top: 80px;
+  padding-bottom: 30px;
+  position: relative; /* Keep the content above the video */
+  z-index: 1; /* Ensure content is above the video */
+  top: -80px;
+  left: 650px;
+  width: 400px;
+  height: 350px;
+ 
+}
+
+.speed-content h1 {
+  font-size: 1.8rem;
+  margin-bottom: 50px;
+  width: 60%;
+  font-weight: 500;
+ 
+}
+
+.speed-content p {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  width: 50%;
+  font-weight: 600;
+ 
+  
+ 
+}
+
+
+.speed-content button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 20px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 40%;
+}
+
+.speed-content  button:hover {
+  background-color: white; 
+  color: black; /* Text color changes on hover */
+}
+
+
+
+
+
+
+
+/* Industries Section Css*/
+
+.container {
+  margin: 0 auto;
+}
+
+/* Header Section: Row with 3 Columns */
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ margin: 100px 200px;
+}
+
+.header-section h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  margin-right: 50px;
+}
+
+.header-section p {
+  font-size: 1.1em;
+  color: #666;
+  margin-bottom: 0;
+  text-align: center;
+  flex-grow: 2;
+  
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  
+}
+
+.navigation-buttons button {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+  padding: 10px;
+  font-size: 1.2em;
+  cursor: pointer;
+  border-radius: 50%;
+  
+}
+
+
+
+/* Carousel Section */
+.carousel {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ccc;
+  cursor: grab; /* Show grab cursor to indicate draggable element */
+}
+
+.carousel-item {
+  text-align: center;
+  flex-grow: 1;
+  border-right: 1px solid #ccc;
+  width: 20%;
+  transition: flex-grow 0.3s ease-in-out;
+  margin: 10px;
+}
+
+
+
+.carousel-item:last-child {
+  border-right: none;
+}
+
+.carousel-item h1 {
+  font-size: 1em;
+  padding-bottom: 80px;
+}
+
+.carousel-item .icon {
+  width: 50px;
+  height: 50px;
+  padding-top: 80px;
+}
+
+.carousel-item .image-container {
+  filter: grayscale(100%);
+  transition: filter 0.5s ease-in-out;
+}
+
+.carousel-item:hover .image-container {
+  filter: grayscale(0%);
+}
+
+.carousel-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.scale-container {
+  display: flex;
+  flex-direction: column; /* Stack vertically */
+  height: 100vh;
+  position: relative;
+ 
+  padding: 0px;
+  box-sizing: border-box; 
+}
+
+.scale-section {
+  width: 41%; /* Full width for the top section */
+  background-color: white;
+  position: relative;
+  top: 200px;
+  left: 0;
+  padding-top: 0;
+  margin-top: -150px;
+  margin-left: 350px;
+  height: 200px;
+}
+
+.scale-content h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-left: 0;
+  width: 50%;
+}
+
+.scale-content p {
+  font-size: 1.1rem;
+  text-align: left;
+  font-weight: 500;
+  color: #4f4f4f;
+  width: 60%;
+}
+
+.scale-content span{
+  color: #e31635;
+}
+
+
+
+.speed-section {
+  width: 100%; /* Full width for the bottom section */
+ height: 1000px; /* Adjust as needed */
+  position: relative;
+  display: flex;
+  clip-path: polygon(0 69%, 100% 20%, 100% 100%, 0 100%);
+  justify-content: center;
+  align-items: center;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures video covers the entire section */
+  z-index: 1; /* Set video behind text */
+}
+
+.speed-content {
+  color: white;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-left: 100px;
+  padding-top: 80px;
+  padding-bottom: 30px;
+  position: relative; /* Keep the content above the video */
+  z-index: 1; /* Ensure content is above the video */
+  top: -80px;
+  left: 650px;
+  width: 400px;
+  height: 350px;
+ 
+}
+
+.speed-content h1 {
+  font-size: 1.8rem;
+  margin-bottom: 50px;
+  width: 60%;
+  font-weight: 500;
+ 
+}
+
+.speed-content p {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  width: 50%;
+  font-weight: 600;
+ 
+  
+ 
+}
+
+
+.speed-content button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 20px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 40%;
+}
+
+.speed-content  button:hover {
+  background-color: white; 
+  color: black; /* Text color changes on hover */
+}
+
+/* Sustainable Future Css */
+
+
+
+/*ScaleAtSpeed Css */
+
+.sustain-container {
+  display: flex;
+  flex-direction: column; /* Stack vertically */
+  height: 100vh;
+  position: relative;
+ 
+  padding: 0px;
+  box-sizing: border-box; 
+}
+
+.sustain-section {
+  width: 41%; /* Full width for the top section */
+  background-color: white;
+  position: relative;
+  top: 200px;
+  left: 0;
+  padding-top: 0;
+  margin-top: -150px;
+  margin-left: 350px;
+  height: 200px;
+}
+
+
+
+
+.future-section {
+  width: 100%; /* Full width for the bottom section */
+ height: 1000px; /* Adjust as needed */
+  position: relative;
+  display: flex;
+  clip-path: polygon(0 60%, 100% 0%, 100% 100%, 0 100%);
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.back-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures video covers the entire section */
+  z-index: 1; /* Set video behind text */
+}
+
+.sustain-content {
+  color: white;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-left: 100px;
+  padding-top: 80px;
+  padding-bottom: 30px;
+  position: relative; /* Keep the content above the video */
+  z-index: 1; /* Ensure content is above the video */
+  top: 110px;
+  left: 5px;
+  width: 400px;
+  height: 350px;
+ 
+}
+
+.sustain-content h1 {
+  font-size: 1.8rem;
+  margin-bottom: 50px;
+  width: 70%;
+  font-weight: 500;
+ 
+}
+
+.sustain-content p {
+  font-size: 1.1rem;
+  margin-bottom: 50px;
+  width: 70%;
+  font-weight: 600;
+}
+
+
+.sustain-content button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 20px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 4px px;
+  cursor: pointer;
+  width: 70%;
+
+}
+
+.sustain-content  button:hover {
+  background-color: white; 
+  color: black; /* Text color changes on hover */
+}
+
+
+
+
+
+/*Contact US Css */
+
+
+.contact-us {
+  display: flex;
+  justify-content: space-around;
+  background-color: #1a1a1a;
+  height: 500px;
+  color: white;
+  padding-right: 300px;
+  padding-left: 300px;
+}
+
+.section {
+  text-align: left;
+}
+
+.section h2 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  font-weight: 500;
+  padding-top: 100px;
+ 
+}
+
+.section p {
+  margin-bottom: 40px;
+  font-weight: 400;
+}
+
+.button {
+  padding: 10px 20px;
+  border: 1px solid white;
+  background: none;
+  color: white;
+  cursor: pointer;
+}
+
+.divider {
+  border-left: 1px solid grey;
+  height: 200px;
+  margin-top: 150px;
+}
+
+
+
+.section button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 20px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 120%;
+}
+
+.section  button:hover {
+  background-color: white; 
+  color: black; /* Text color changes on hover */
+}
+
+
+
+
+/*Footer Css */
+
+.footer {
+  background-color: #000;
+  color: white;
+ padding: 10px 300px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 200px;
+  width: 50%;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 10px;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  top: -100px;
+ 
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #333;
+  padding: 10px 20px;
+}
+
+.terms span {
+  margin-right: 15px;
+}
+
+
+
+/* RiseSection.css */
+.rise-section {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  padding: 50px;
+}
+
+.image-contain {
+  flex: 1;
+  padding: 200px 200px;
+}
+
+.rise-image {
+  width: 100%;
+}
+
+.content-container {
+  flex: 1;
+  padding-left: 40px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  margin-right: 60px;
+}
+
+.learn-more-link {
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.learn-more-link:hover {
+  color: red;
+  
+}
+
